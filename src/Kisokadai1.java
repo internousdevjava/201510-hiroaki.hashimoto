@@ -5,13 +5,13 @@ import java.io.BufferedReader;
 	{
 		  public static void main(String args[]) 
 		  {
-			    System.out.println("‹ã‹ã‚Ì•\");
+			    System.out.println("ä¹ä¹ã®è¡¨");
 
 			    int x;
 	            int y;
 	            
-	            // x“ü—Í
-	            System.out.print("x‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢: ");
+	            // xå…¥åŠ›
+	            System.out.print("xã‚’å…¥åŠ›ã—ã¦ãã ã•ã„: ");
 	            InputStreamReader isrx = new InputStreamReader(System.in);
 	            BufferedReader brx = new BufferedReader(isrx);
 	            try{
@@ -21,8 +21,8 @@ import java.io.BufferedReader;
 	                    x = 0;
 	            }
 	         
-	            //@y“ü—Í
-	            System.out.print("y‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢: ");
+	            //ã€€yå…¥åŠ›
+	            System.out.print("yã‚’å…¥åŠ›ã—ã¦ãã ã•ã„: ");
 	            InputStreamReader isry = new InputStreamReader(System.in);
 	            BufferedReader bry = new BufferedReader(isry);
 	            try{
@@ -32,17 +32,17 @@ import java.io.BufferedReader;
 	                y = 0;
 	            }
 	            
-			    // ”z—ñ‚ÌéŒ¾B
+			    // é…åˆ—ã®å®£è¨€ã€‚
 			    int kuku[][] = new int[x][y];
 
-			    // ‹ã‹ã‚ÌŒ‹‰Ê‚ğ”z—ñ‚É•Û‘¶B
+			    // ä¹ä¹ã®çµæœã‚’é…åˆ—ã«ä¿å­˜ã€‚
 			    for( int i=0; i<x; i++ ) {
 			      for( int j=0; j<y; j++ ){
 			    	  kuku[i][j] = (i+1) * (j+1);
 			      }
 			    }
 
-			    // ‹ã‹ã‚ÌŒ‹‰Ê‚ğ•\¦B
+			    // ä¹ä¹ã®çµæœã‚’è¡¨ç¤ºã€‚
 			    for( int i=0; i<x; i++ ) {
 			      for( int j=0; j<y; j++ ) { 
 			    	  System.out.print(kuku[i][j] + " "); 
