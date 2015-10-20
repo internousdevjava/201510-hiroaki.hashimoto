@@ -1,4 +1,4 @@
-package テキストエディタ.java;
+
 
 
 import java.io.BufferedReader;
@@ -10,7 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-public class テキストエディタ {
+public class kisokadai3 {
 	public static void main(String args[]) throws IOException{
 			System.out.println("--実行--");
 			//コマンド入力されているかのチェック！
