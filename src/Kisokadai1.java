@@ -1,39 +1,63 @@
 import java.io.BufferedReader;
-	import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+public class Kisokadai1 {
+	  public static void main(String args[]) throws IOException {
+		  int xx = 10;
+		  int yy = 10;
+		  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-	public class Kisokadai1
-	{
-		  public static void main(String args[]) 
-		  {
-			    System.out.println("九九の表");
+		  System.out.println("x軸の最大値を1～"+ xx +"迄の数字で入力してください:");
 
-			    int x;
-	            int y;
-	            try{
-	            // x入力
-	            System.out.print("xを入力してください: ");
-	            InputStreamReader isrx = new InputStreamReader(System.in);
-	            BufferedReader bufx = new BufferedReader(isrx);
-	                    String str = bufx.readLine();
-	                    x = Integer.parseInt(str);
-	         
-	            //　y入力
-	            System.out.print("yを入力してください: ");
-	         
-	            y = Integer.parseInt(bufx.readLine());
+		    try{
 
-			    // 九九の結果を表示。
-			    for( int i=1; i<x; i++ ) {
-			      for( int j=1; j<y; j++ ) { 
-			    	  System.out.print(i*j ); 
-			      
-			      	  System.out.println(""); 
-			    }
-	            }
-	            }
-			    catch(Exception e){
-                    System.err.println(e);
-            }
-		  }
-	}
+		        int x = Integer.parseInt(br.readLine());
 
+		        if(x > xx){
+		        	System.out.println("入力した数字は使用できません!!");
+		        	main(args);
+		        }
+
+		        System.out.println("y軸の最大値を1～"+ yy +"迄の数字で入力してください:");
+
+		        int y = Integer.parseInt(br.readLine());
+
+		        if(y > yy){
+		        	System.out.println("入力した数字は使用できません!!\r\nやり直してください");
+		      		        	main(args);
+		        }
+
+		        int keisan [][] = new int [xx][yy];
+
+		        for( int i=0; i<y; i++ ) {
+
+		        	for( int j=0; j<x; j++ ){
+
+		        		keisan[i][j] = (i+1) * (j+1);
+
+		        		if(keisan[i][j] >= 10){
+		        			System.out.print(" " + keisan[i][j]);
+		        		}else{
+		        			if(keisan[i][j] >= 10){
+		        				System.out.print("  " + keisan[i][j]);
+		        			}else{
+		        				System.out.print("   " + keisan[i][j]);
+		        			}
+		        		}
+		        	}
+		        	System.out.println();
+		        }
+
+		    }catch(NumberFormatException e){
+		    	System.out.println("数字以外が入力されました\r\nやり直してください");
+		    	main(args);
+		    }catch(IOException e){
+		    	System.out.println(e);
+		    	main(args);
+		    }finally{
+		    	System.out.println("プログラムを終了します");
+		    	System.exit(0);
+		    }
+	 }
+
+}

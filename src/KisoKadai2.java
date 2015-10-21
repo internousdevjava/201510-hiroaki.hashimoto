@@ -1,42 +1,41 @@
-
 import java.io.*;
-import java.util.*;
+import java.util.Random;
 
 public class KisoKadai2 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		Random rnd = new Random();// RandomƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+		Random rnd = new Random();// Randomã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–
 
 		int end = 0;
-		int ran = rnd.nextInt() % 101;// —”ì¬
-		if (ran < 0) {// ‚à‚µ—”‚ªƒ}ƒCƒiƒX‚¾‚Á‚½‚ç-1‚ğ‚©‚¯‚Äƒvƒ‰ƒX‚É
+		int ran = rnd.nextInt() % 101;// ä¹±æ•°ä½œæˆ
+		if (ran < 0) {// ã‚‚ã—ä¹±æ•°ãŒãƒã‚¤ãƒŠã‚¹ã ã£ãŸã‚‰-1ã‚’ã‹ã‘ã¦ãƒ—ãƒ©ã‚¹ã«
 			ran *= -1;
 		}
-		System.out.println("‚b‚o‚t‚ª‚P`‚P‚O‚O‚Ì”š‚ğƒ‰ƒ“ƒ_ƒ€‚Åì¬‚µ‚Ü‚·‚»‚ê‚ğ“–‚Ä‚Ä‚­‚¾‚³‚¢");
-		System.out.println(ran);
+		System.out.println("ï¼£ï¼°ï¼µãŒï¼‘ï½ï¼‘ï¼ï¼ã®æ•°å­—ã‚’ãƒ©ãƒ³ãƒ€ãƒ ã§ä½œæˆã—ã¾ã™ãã‚Œã‚’å½“ã¦ã¦ãã ã•ã„");
+		
 		while (end == 0) {
 			try {
-				System.out.println("‚P`‚P‚O‚O‚Ì”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢AI—¹‚·‚é‚Æ‚«‚Í1000‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+				System.out.println("ï¼‘ï½ï¼‘ï¼ï¼ã®æ•°å­—ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€çµ‚äº†ã™ã‚‹ã¨ãã¯1000ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
 				String str = br.readLine();
 				int nu = Integer.parseInt(str);
 				if (nu == 1000) {
 					break;
 				}
 				if (nu == ran) {
-					System.out.println("³‰ğ‚Å‚·I");
+					System.out.println("æ­£è§£ã§ã™ï¼");
 					end = 1;
 				} else if (nu > 100 || nu < 1) {
-					System.out.println("‚P`‚P‚O‚O‚Ì”š‚ğ“ü‚ê‚Ä‚­‚¾‚³‚¢");
+					System.out.println("ï¼‘ï½ï¼‘ï¼ï¼ã®æ•°å­—ã‚’å…¥ã‚Œã¦ãã ã•ã„");
 				} else if (nu > ran) {
-					System.out.println("CPU‚ªì¬‚µ‚½”š‚Í‚à‚Á‚Æ¬‚³‚¢‚Å‚·");
+					System.out.println("CPUãŒä½œæˆã—ãŸæ•°å­—ã¯ã‚‚ã£ã¨å°ã•ã„ã§ã™");
 
 				} else if (nu < ran) {
-					System.out.println("CPU‚ªì¬‚µ‚½”š‚Í‚à‚Á‚Æ‘å‚«‚¢‚Å‚·");
+					System.out.println("CPUãŒä½œæˆã—ãŸæ•°å­—ã¯ã‚‚ã£ã¨å¤§ãã„ã§ã™");
 				} 
 			} catch (Exception e) {
-				System.out.println("“ü—ÍƒGƒ‰[‚Å‚·");
+				System.out.println("å…¥åŠ›ã‚¨ãƒ©ãƒ¼ã§ã™");
 			}
 		}
-		System.out.println("I—¹‚µ‚Ü‚µ‚½");
+		System.out.println("çµ‚äº†ã—ã¾ã—ãŸ");
 	}
 }
